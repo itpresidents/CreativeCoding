@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>55093B38-C8B9-4A36-921A-588F5A721EBA</string>
+	<key>IDESourceControlProjectName</key>
+	<string>stdVector</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>C984DDC9-15A5-4DDA-8A69-BA00C63E0812</key>
+		<string>ssh://github.com/itpresidents/CreativeCoding.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>01-Data-Pointers-Classes/stdVector/stdVector.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>C984DDC9-15A5-4DDA-8A69-BA00C63E0812</key>
+		<string>../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>ssh://github.com/itpresidents/CreativeCoding.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>C984DDC9-15A5-4DDA-8A69-BA00C63E0812</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>C984DDC9-15A5-4DDA-8A69-BA00C63E0812</string>
+			<key>IDESourceControlWCCName</key>
+			<string>CreativeCoding</string>
+		</dict>
+	</array>
+</dict>
+</plist>
