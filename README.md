@@ -14,5 +14,7 @@ Created by Ryan Bartley and Mike Allison
 will only have the reasources, includes and src folders, to use them:
 
 1) create a new cinder project with tinder box
+
 2) copy the folders from the project in the repo into your cinder project
+
 3) run and play!
