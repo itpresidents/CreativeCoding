@@ -31,7 +31,8 @@ class CirclesApp : public AppNative {
 
 void CirclesApp::setup()
 {
-
+	DrawableShape drawable;
+	
     mShapes.resize( NUM_SHAPES );
 
     for( int i = 0; i < NUM_SHAPES; ++i ) {
