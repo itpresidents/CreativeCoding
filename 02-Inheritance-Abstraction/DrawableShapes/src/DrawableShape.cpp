@@ -16,20 +16,9 @@
 using namespace std;
 using namespace ci;
 
-
-DrawableShape::DrawableShape()
-: mPosition( Vec2f::zero() ),
-mColor( randFloat(), randFloat(), randFloat() )
+DrawableShape::DrawableShape( const Vec2f &position )
+: mPosition( position ), mColor( randFloat(), randFloat(), randFloat() )
 {
-	
-    cout << "I'm constructing with zero integers" << endl;
-}
-
-
-DrawableShape::DrawableShape( int x, int y )
-: mPosition(Vec2f( x, y)), mColor( randFloat(), randFloat(), randFloat() )
-{
-    cout << "I'm constructing with two integers" << endl;
 }
 
 void DrawableShape::update()

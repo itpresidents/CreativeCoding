@@ -33,15 +33,15 @@
 		C7FB19D6124BC0D70045AFD2 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7FB19D5124BC0D70045AFD2 /* AudioToolbox.framework */; };
 		00A66A361965AC8800B17EB3 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00A66A351965AC8800B17EB3 /* Accelerate.framework */; };
 		00748058165D41390024B57A /* assets in Resources */ = {isa = PBXBuildFile; fileRef = 00748057165D41390024B57A /* assets */; };
-		75BDFE8D96C34D4DBF4A53B2 /* Circles_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = 20C2C8F6961D4777850C6101 /* Circles_Prefix.pch */; };
-		EDCD54B6FDE4488597CD8AE2 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0586755641A8486D80258457 /* Default-568h@2x.png */; };
-		D57EA063E9114FD5BEC73CBD /* CinderApp_ios.png in Resources */ = {isa = PBXBuildFile; fileRef = 0763CA64E0C5468182981018 /* CinderApp_ios.png */; };
-		1A7BB54216EB495D98E6B4CE /* Resources.h in Headers */ = {isa = PBXBuildFile; fileRef = 386DAF441B134C51AAF46DD5 /* Resources.h */; };
-		B2F4D2867D6C48AC8C049C55 /* CirclesApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4682CD9E3D864F6BA3848F23 /* CirclesApp.cpp */; };
+		1D07C549B62C49118CA39B67 /* DrawableShapes_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = C7317AABB6A8429382654070 /* DrawableShapes_Prefix.pch */; };
+		19A0A7258F454CCF8C5D5882 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C9093DB724EF49CA900E939F /* Default-568h@2x.png */; };
+		7346B72017124347B359D384 /* CinderApp_ios.png in Resources */ = {isa = PBXBuildFile; fileRef = 7446C4921B514B77BF8730F8 /* CinderApp_ios.png */; };
+		1772624D647C41518385C9D7 /* Resources.h in Headers */ = {isa = PBXBuildFile; fileRef = 54ED832A935B4673B77C21BA /* Resources.h */; };
+		E2541367B17847F78E3B0DB4 /* DrawableShapesApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63616A72C51944FF9C9A50A9 /* DrawableShapesApp.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		00692BCF14FF149000D0A05E /* Circles.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Circles.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		00692BCF14FF149000D0A05E /* DrawableShapes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DrawableShapes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0087D25412CD809F002CD69F /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 		00CFDF6A1138442D0091E310 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		00CFDF6A1138442D0091FFFF /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
@@ -56,12 +56,12 @@
 		C7FB19D5124BC0D70045AFD2 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		00A66A351965AC8800B17EB3 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
 		00748057165D41390024B57A /* assets */ = {isa = PBXFileReference; lastKnownFileType = folder; name = assets; path = ../assets; sourceTree = "<group>"; };
-		4682CD9E3D864F6BA3848F23 /* CirclesApp.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.cpp; path = ../src/CirclesApp.cpp; sourceTree = "<group>"; name = CirclesApp.cpp; };
-		386DAF441B134C51AAF46DD5 /* Resources.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ../include/Resources.h; sourceTree = "<group>"; name = Resources.h; };
-		0763CA64E0C5468182981018 /* CinderApp_ios.png */ = {isa = PBXFileReference; lastKnownFileType = "\"\""; path = ../resources/CinderApp_ios.png; sourceTree = "<group>"; name = CinderApp_ios.png; };
-		0586755641A8486D80258457 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = "\"\""; path = "Default-568h@2x.png"; sourceTree = "<group>"; name = "Default-568h@2x.png"; };
-		15583A06857A4DB8BAB91ADD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; name = Info.plist; };
-		20C2C8F6961D4777850C6101 /* Circles_Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = "\"\""; path = Circles_Prefix.pch; sourceTree = "<group>"; name = Circles_Prefix.pch; };
+		63616A72C51944FF9C9A50A9 /* DrawableShapesApp.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.cpp; path = ../src/DrawableShapesApp.cpp; sourceTree = "<group>"; name = DrawableShapesApp.cpp; };
+		54ED832A935B4673B77C21BA /* Resources.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ../include/Resources.h; sourceTree = "<group>"; name = Resources.h; };
+		7446C4921B514B77BF8730F8 /* CinderApp_ios.png */ = {isa = PBXFileReference; lastKnownFileType = "\"\""; path = ../resources/CinderApp_ios.png; sourceTree = "<group>"; name = CinderApp_ios.png; };
+		C9093DB724EF49CA900E939F /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = "\"\""; path = "Default-568h@2x.png"; sourceTree = "<group>"; name = "Default-568h@2x.png"; };
+		E654FC20B93D4DD5BF31618E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; name = Info.plist; };
+		C7317AABB6A8429382654070 /* DrawableShapes_Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = "\"\""; path = DrawableShapes_Prefix.pch; sourceTree = "<group>"; name = DrawableShapes_Prefix.pch; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,7 +103,7 @@
 		00692BD014FF149000D0A05E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				00692BCF14FF149000D0A05E /* Circles.app */,
+				00692BCF14FF149000D0A05E /* DrawableShapes.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -138,8 +138,8 @@
 		99692BD914FF149000D0A05F /* Headers */ = {
 			isa = PBXGroup;
 			children = (
-				386DAF441B134C51AAF46DD5 /* Resources.h */,
-				20C2C8F6961D4777850C6101 /* Circles_Prefix.pch */,
+				54ED832A935B4673B77C21BA /* Resources.h */,
+				C7317AABB6A8429382654070 /* DrawableShapes_Prefix.pch */,
 			);
 			name = Headers;
 			sourceTree = "<group>";
@@ -147,7 +147,7 @@
 		00692BD914FF149000D0A05E /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				4682CD9E3D864F6BA3848F23 /* CirclesApp.cpp */,
+				63616A72C51944FF9C9A50A9 /* DrawableShapesApp.cpp */,
 			);
 			name = Source;
 			sourceTree = "<group>";
@@ -156,9 +156,9 @@
 			isa = PBXGroup;
 			children = (
 				00748057165D41390024B57A /* assets */,
-				0763CA64E0C5468182981018 /* CinderApp_ios.png */,
-				0586755641A8486D80258457 /* Default-568h@2x.png */,
-				15583A06857A4DB8BAB91ADD /* Info.plist */,
+				7446C4921B514B77BF8730F8 /* CinderApp_ios.png */,
+				C9093DB724EF49CA900E939F /* Default-568h@2x.png */,
+				E654FC20B93D4DD5BF31618E /* Info.plist */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -166,9 +166,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		00692BCE14FF149000D0A05E /* Circles */ = {
+		00692BCE14FF149000D0A05E /* DrawableShapes */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 00692BF514FF149000D0A05E /* Build configuration list for PBXNativeTarget "Circles" */;
+			buildConfigurationList = 00692BF514FF149000D0A05E /* Build configuration list for PBXNativeTarget "DrawableShapes" */;
 			buildPhases = (
 				00692BCB14FF149000D0A05E /* Sources */,
 				00692BCC14FF149000D0A05E /* Frameworks */,
@@ -178,9 +178,9 @@
 			);
 			dependencies = (
 			);
-			name = Circles;
-			productName = Circles;
-			productReference = 00692BCF14FF149000D0A05E /* Circles.app */;
+			name = DrawableShapes;
+			productName = DrawableShapes;
+			productReference = 00692BCF14FF149000D0A05E /* DrawableShapes.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -188,7 +188,7 @@
 /* Begin PBXProject section */
 		00692BC614FF149000D0A05E /* Project object */ = {
 			isa = PBXProject;
-			buildConfigurationList = 00692BC914FF149000D0A05E /* Build configuration list for PBXProject "Circles" */;
+			buildConfigurationList = 00692BC914FF149000D0A05E /* Build configuration list for PBXProject "DrawableShapes" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -200,7 +200,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				00692BCE14FF149000D0A05E /* Circles */,
+				00692BCE14FF149000D0A05E /* DrawableShapes */,
 			);
 		};
 /* End PBXProject section */
@@ -211,8 +211,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				00748058165D41390024B57A /* assets in Resources */,
-				D57EA063E9114FD5BEC73CBD /* CinderApp_ios.png in Resources */,
-				EDCD54B6FDE4488597CD8AE2 /* Default-568h@2x.png in Resources */,
+				7346B72017124347B359D384 /* CinderApp_ios.png in Resources */,
+				19A0A7258F454CCF8C5D5882 /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -223,7 +223,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B2F4D2867D6C48AC8C049C55 /* CirclesApp.cpp in Sources */,
+				E2541367B17847F78E3B0DB4 /* DrawableShapesApp.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -252,10 +252,10 @@
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				CINDER_PATH = "../../../../cinder_dev";
+				CINDER_PATH = "../../../../clean_cinder";
 				HEADER_SEARCH_PATHS = "\"$(CINDER_PATH)/boost\"";
 				USER_HEADER_SEARCH_PATHS = "\"$(CINDER_PATH)/include\" ../include";
 			};
@@ -280,12 +280,12 @@
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
-				CINDER_PATH = "../../../../cinder_dev";
+				CINDER_PATH = "../../../../clean_cinder";
 				HEADER_SEARCH_PATHS = "\"$(CINDER_PATH)/boost\"";
 				USER_HEADER_SEARCH_PATHS = "\"$(CINDER_PATH)/include\" ../include";
 			};
@@ -295,7 +295,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Circles_Prefix.pch";
+				GCC_PREFIX_HEADER = "DrawableShapes_Prefix.pch";
 				INFOPLIST_FILE = "Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -314,7 +314,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Circles_Prefix.pch";
+				GCC_PREFIX_HEADER = "DrawableShapes_Prefix.pch";
 				INFOPLIST_FILE = "Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -332,7 +332,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		00692BC914FF149000D0A05E /* Build configuration list for PBXProject "Circles" */ = {
+		00692BC914FF149000D0A05E /* Build configuration list for PBXProject "DrawableShapes" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				00692BF314FF149000D0A05E /* Debug */,
@@ -341,7 +341,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		00692BF514FF149000D0A05E /* Build configuration list for PBXNativeTarget "Circles" */ = {
+		00692BF514FF149000D0A05E /* Build configuration list for PBXNativeTarget "DrawableShapes" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				00692BF614FF149000D0A05E /* Debug */,

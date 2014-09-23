@@ -1,7 +1,7 @@
 
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Express 2012 for Windows Desktop
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Circles", "Circles.vcxproj", "{3E5B1A58-98AE-4E60-8C56-61E76EC75E7F}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DrawableShapes", "DrawableShapes.vcxproj", "{FA09A439-1687-4A2E-86E7-F47DF65E68B9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -9,10 +9,10 @@ Global
 		Release|Win32 = Release|Win32
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{3E5B1A58-98AE-4E60-8C56-61E76EC75E7F}.Debug|Win32.ActiveCfg = Debug|Win32
-		{3E5B1A58-98AE-4E60-8C56-61E76EC75E7F}.Debug|Win32.Build.0 = Debug|Win32
-		{3E5B1A58-98AE-4E60-8C56-61E76EC75E7F}.Release|Win32.ActiveCfg = Release|Win32
-		{3E5B1A58-98AE-4E60-8C56-61E76EC75E7F}.Release|Win32.Build.0 = Release|Win32
+		{FA09A439-1687-4A2E-86E7-F47DF65E68B9}.Debug|Win32.ActiveCfg = Debug|Win32
+		{FA09A439-1687-4A2E-86E7-F47DF65E68B9}.Debug|Win32.Build.0 = Debug|Win32
+		{FA09A439-1687-4A2E-86E7-F47DF65E68B9}.Release|Win32.ActiveCfg = Release|Win32
+		{FA09A439-1687-4A2E-86E7-F47DF65E68B9}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
