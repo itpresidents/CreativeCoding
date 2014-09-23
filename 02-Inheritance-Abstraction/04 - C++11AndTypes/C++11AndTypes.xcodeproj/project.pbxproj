@@ -6,11 +6,6 @@
 	objectVersion = 46;
 	objects = {
 
-/* Begin PBXBuildFile section */
-		4FA61C3619CDCABE005F4F51 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4FA61C3519CDCABE005F4F51 /* main.cpp */; };
-		4FA61C3819CDCABE005F4F51 /* StdCasts.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4FA61C3719CDCABE005F4F51 /* StdCasts.1 */; };
-/* End PBXBuildFile section */
-
 /* Begin PBXCopyFilesBuildPhase section */
 		4FA61C3019CDCABE005F4F51 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
@@ -18,16 +13,15 @@
 			dstPath = /usr/share/man/man1/;
 			dstSubfolderSpec = 0;
 			files = (
-				4FA61C3819CDCABE005F4F51 /* StdCasts.1 in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 1;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		4FA61C3219CDCABE005F4F51 /* StdCasts */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = StdCasts; sourceTree = BUILT_PRODUCTS_DIR; };
-		4FA61C3519CDCABE005F4F51 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
-		4FA61C3719CDCABE005F4F51 /* StdCasts.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = StdCasts.1; sourceTree = "<group>"; };
+		4FA61C3219CDCABE005F4F51 /* C++11AndTypes */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "C++11AndTypes"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B30F0E0519D1D3B600B66C4B /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		B30F0E0619D1D3B600B66C4B /* StdCasts.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = StdCasts.1; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,7 +38,7 @@
 		4FA61C2919CDCABE005F4F51 = {
 			isa = PBXGroup;
 			children = (
-				4FA61C3419CDCABE005F4F51 /* StdCasts */,
+				B30F0E0419D1D3B600B66C4B /* C++11AndTypes */,
 				4FA61C3319CDCABE005F4F51 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -52,26 +46,26 @@
 		4FA61C3319CDCABE005F4F51 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				4FA61C3219CDCABE005F4F51 /* StdCasts */,
+				4FA61C3219CDCABE005F4F51 /* C++11AndTypes */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		4FA61C3419CDCABE005F4F51 /* StdCasts */ = {
+		B30F0E0419D1D3B600B66C4B /* C++11AndTypes */ = {
 			isa = PBXGroup;
 			children = (
-				4FA61C3519CDCABE005F4F51 /* main.cpp */,
-				4FA61C3719CDCABE005F4F51 /* StdCasts.1 */,
+				B30F0E0519D1D3B600B66C4B /* main.cpp */,
+				B30F0E0619D1D3B600B66C4B /* StdCasts.1 */,
 			);
-			path = StdCasts;
+			path = "C++11AndTypes";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		4FA61C3119CDCABE005F4F51 /* StdCasts */ = {
+		4FA61C3119CDCABE005F4F51 /* C++11AndTypes */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4FA61C3B19CDCABE005F4F51 /* Build configuration list for PBXNativeTarget "StdCasts" */;
+			buildConfigurationList = 4FA61C3B19CDCABE005F4F51 /* Build configuration list for PBXNativeTarget "C++11AndTypes" */;
 			buildPhases = (
 				4FA61C2E19CDCABE005F4F51 /* Sources */,
 				4FA61C2F19CDCABE005F4F51 /* Frameworks */,
@@ -81,9 +75,9 @@
 			);
 			dependencies = (
 			);
-			name = StdCasts;
+			name = "C++11AndTypes";
 			productName = StdCasts;
-			productReference = 4FA61C3219CDCABE005F4F51 /* StdCasts */;
+			productReference = 4FA61C3219CDCABE005F4F51 /* C++11AndTypes */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
@@ -95,7 +89,7 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Mike Allison";
 			};
-			buildConfigurationList = 4FA61C2D19CDCABE005F4F51 /* Build configuration list for PBXProject "StdCasts" */;
+			buildConfigurationList = 4FA61C2D19CDCABE005F4F51 /* Build configuration list for PBXProject "C++11AndTypes" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -107,7 +101,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				4FA61C3119CDCABE005F4F51 /* StdCasts */,
+				4FA61C3119CDCABE005F4F51 /* C++11AndTypes */,
 			);
 		};
 /* End PBXProject section */
@@ -117,7 +111,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4FA61C3619CDCABE005F4F51 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -197,21 +190,21 @@
 		4FA61C3C19CDCABE005F4F51 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "C++11AndTypes";
 			};
 			name = Debug;
 		};
 		4FA61C3D19CDCABE005F4F51 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "C++11AndTypes";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		4FA61C2D19CDCABE005F4F51 /* Build configuration list for PBXProject "StdCasts" */ = {
+		4FA61C2D19CDCABE005F4F51 /* Build configuration list for PBXProject "C++11AndTypes" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4FA61C3919CDCABE005F4F51 /* Debug */,
@@ -220,13 +213,14 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4FA61C3B19CDCABE005F4F51 /* Build configuration list for PBXNativeTarget "StdCasts" */ = {
+		4FA61C3B19CDCABE005F4F51 /* Build configuration list for PBXNativeTarget "C++11AndTypes" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4FA61C3C19CDCABE005F4F51 /* Debug */,
 				4FA61C3D19CDCABE005F4F51 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
