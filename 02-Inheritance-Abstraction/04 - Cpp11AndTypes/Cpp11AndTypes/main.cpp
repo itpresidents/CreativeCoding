@@ -25,8 +25,8 @@
 // Look below for the usage. Also, for a further explanation checkout...
 // http://www.cprogramming.com/c++11/c++11-nullptr-strongly-typed-enum-class.html
 enum class DerivedTypes {
-    DERIVED_FLOAT,
-    DERIVED_ARRAY
+	DERIVED_FLOAT,
+	DERIVED_ARRAY
 };
 
 
@@ -36,7 +36,7 @@ class Base {
 public:
 	
 	// Constructor
-    Base( const std::string& name ) : mName(name){}
+	Base( const std::string& name ) : mName(name){}
 	// Virtual Destructor
 	// We saw this in the last sample but I didn't explain what was going on. Now I will.
 	// Basically, like you saw in the last sample, we can cast derived classes into their
@@ -57,20 +57,20 @@ public:
 	// what order it will be called.
 	virtual ~Base() { std::cout << "BASE Destructor with name: " << mName << std::endl; }
 	// Getter
-    const std::string& getName() { return mName; }
+	const std::string& getName() { return mName; }
 	// Pure Virtual Function - any inherited class is contractually obligated
 	// to implement this if they'd like to make an instance of themselves
-    virtual void print() = 0;
+	virtual void print() = 0;
 	
 	// Note: Here's the first usage of the 'enum class' DerivedTypes. However, since it's pure virtual
 	// I'm going to save the explanation until there's a definition. One thing is that I have defined
 	// that this function should be const, because this function should not change anything about the
 	// data members in the instance.
-    virtual DerivedTypes getDerivedType() const = 0;
-
-// 'protected:' so that inherited classes can use.
+	virtual DerivedTypes getDerivedType() const = 0;
+	
+	// 'protected:' so that inherited classes can use.
 protected:
-    std::string mName;
+	std::string mName;
 };
 
 // Simple Derived class from the BasicInheritance sample. The name's been changed. For an explanation of
@@ -79,7 +79,7 @@ class DerivedFloat : public Base {
 public:
 	
 	// Constructor												Note: Base is initialized first.
-    DerivedFloat( const std::string& name, const float& number ) : Base(name), mNumber(number){}
+	DerivedFloat( const std::string& name, const float& number ) : Base(name), mNumber(number){}
 	
 	// Overriding Destructor for Base. This is going to print out something so you can see the
 	// order of destruction. Notice I don't have to write override because there can only be one
@@ -88,10 +88,10 @@ public:
 	
 	// Implementation of the inherited pure virtual print function. Notice that I use override
 	// as a nice safety net to make sure I'm actually overriding the function.
-    void print() override { std::cout<< "I'm DerivedFloat: " << getNumber() << " " << mName <<std::endl; }
+	void print() override { std::cout<< "I'm DerivedFloat: " << getNumber() << " " << mName <<std::endl; }
 	
 	// Simple other function not on Base. Used in the overriden print function.
-    float getNumber(){ return mNumber; }
+	float getNumber(){ return mNumber; }
 	
 	// Implementation of the inherited pure virtual 'getDerivedType' function from Base. Now I'll
 	// explain what we're using this DerivedType, enum class, for. Basically, this paradigm is
@@ -102,11 +102,11 @@ public:
 	// contract by making this const and just inserting the DerivedTypes type directly in the
 	// function. It doesn't need to be a member because it is constant to any instance that
 	// I make of this class.
-    DerivedTypes getDerivedType() const override { return DerivedTypes::DERIVED_FLOAT; }
+	DerivedTypes getDerivedType() const override { return DerivedTypes::DERIVED_FLOAT; }
  
-// We don't need to derive from this, hence 'private:'.
+	// We don't need to derive from this, hence 'private:'.
 private:
-    float mNumber;
+	float mNumber;
 };
 
 // Simple Derived class from the BasicInheritance sample. The name's been changed. And it is different
@@ -125,7 +125,7 @@ public:
 	
 	// Implementation of the inherited pure virtual print function. Notice that I use override
 	// as a nice safety net to make sure I'm actually overriding the function.
-    void print() override
+	void print() override
 	{
 		std::cout<< "I'm DerivedInt: " << std::endl;
 		// We haven't seen this yet but you've probably seen it in other languages. This is a
@@ -145,9 +145,9 @@ public:
 	
 	// Implementation of the inherited pure virtual 'getDerivedType' function from Base. Look above
 	// and below for a discussion of what it'll be used for.
-    DerivedTypes getDerivedType() const override { return DerivedTypes::DERIVED_ARRAY; }
-
-// We don't need to derive from this, hence 'private:'.
+	DerivedTypes getDerivedType() const override { return DerivedTypes::DERIVED_ARRAY; }
+	
+	// We don't need to derive from this, hence 'private:'.
 private:
 	// This is a C++11 construct. Basically, it's very similar to an array declared like this...
 	//
@@ -169,7 +169,7 @@ private:
 	// So it is very similar but unlike a C-Style array it provides a great amount of functionality
 	// beyond what a C-Style array provides as can be seen in the for statement in this classes' 'print'
 	// function.
-    std::array<int, 10> mNumbers;
+	std::array<int, 10> mNumbers;
 };
 
 // I know I've introduced you to maybe some crazy stuff so far in this lesson, maybe not but what I'm
@@ -219,17 +219,17 @@ int main(int argc, const char * argv[])
 	//
 	// Could you imagine how awful that'd be? Can you see why C++ has had a bad name for so long? The
 	// below line show just how much more modern C++ has become. It is so much more expressive!
-    auto mBases = BaseList();
+	auto mBases = BaseList();
 	
 	// Now I can add instances of Derived Classes that inherit from Base easily into this vector because
 	// shared_ptr's will implicitly cast the underlying pointer, which is of Derived type, to the base
 	// type and it does this safely by checking types at compile-time and throwing errors if you're doing
 	// something you shouldn't be, like trying to convert something you think is derived that isn't actually
 	// So Safety! So Nice! Also notice how nice the type definitions are to write!
-    mBases.push_back( DerivedFloatRef( new DerivedFloat( "Mike", 29.0f ) ) );
-    mBases.push_back( DerivedArrayRef( new DerivedArray( "Ryan" ) ) );
-
-    // Now hopefully you can see what is going on with auto here. Basically because the compiler
+	mBases.push_back( DerivedFloatRef( new DerivedFloat( "Mike", 29.0f ) ) );
+	mBases.push_back( DerivedArrayRef( new DerivedArray( "Ryan" ) ) );
+	
+	// Now hopefully you can see what is going on with auto here. Basically because the compiler
 	// knows that mBases is a std::vector of BaseRefs it already knows what type 'basePtr' should
 	// be, BaseRef. After it figures out what type 'basePtr' is, I then tell it that I'd like
 	// to take a reference to that type which means that 'basePtr' is going to point to the
@@ -237,45 +237,31 @@ int main(int argc, const char * argv[])
 	// couple of letters, which happens to be only good. This is the reason that we've spent
 	// so much time on syntax, because once you understand what's going on, you'll be able to
 	// just express what you mean.
-    for ( auto & basePtr : mBases ) {
+	for ( auto & basePtr : mBases ) {
 		// Use base like it has been created to be used.
-        std::cout << basePtr->getName() << std::endl;
-        basePtr->print();
+		std::cout << basePtr->getName() << std::endl;
+		basePtr->print();
 		
 		// I'd like to do something with DerivedFloat specifically. So, let's check it's run-time
 		// type information.
-        if( basePtr->getDerivedType() == DerivedTypes::DERIVED_FLOAT ) {
+		if( basePtr->getDerivedType() == DerivedTypes::DERIVED_FLOAT ) {
 			// Yaaaayyyy auto! std also provides a function called dynamic_pointer_cast for std::shared_ptr's
 			// you put the type of shared pointer (DerivedFloat) you'd like to cast to and provide the
 			// object you'd like to cast (basePtr) and It will return a std::shared_ptr<DerivedFloat>. Now
 			// we can see that auto will work because we've told the compiler all the info it needs to descern
 			// the type of derivedFloatPtr. Simple!
-            auto derivedFloatPtr = std::dynamic_pointer_cast<DerivedFloat>( basePtr );
+			auto derivedFloatPtr = std::dynamic_pointer_cast<DerivedFloat>( basePtr );
 			// Let's check that.
-            std::cout << "I'm a derived float ptr: " << derivedFloatPtr->getNumber() << std::endl;
-        }
+			std::cout << "I'm a derived float ptr: " << derivedFloatPtr->getNumber() << std::endl;
+		}
 		else {
 			std::cout << basePtr->getName() << " isn't a DERIVED_FLOAT" << std::endl;
 		}
-    }
+	}
 	
 	// After this function returns you'll be able to see the way in which order everything is destroyed.
 	// Check the console! And thanks for following me through this windy road. I promise when you understand
 	// what's basically going on in the lessons up to here things about C++ will become much easier.
 	
-    return 0;
+	return 0;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
