@@ -69,7 +69,7 @@ void PixelSortingApp::setup()
 		console() << "Failed to initialize capture, what: " << exc.what() << std::endl;
 	}
 	mSortablePixels.resize(640);
-	mSortType = SortType::SLOW;
+	mSortType = SortType::FAST;
 	
 	for( int b = 0; b < NUM_BUFFERS; ++b )
 		mTexs[b] = gl::Texture::create( IMAGE_WIDTH, IMAGE_HEIGHT, gl::Texture::Format().internalFormat( (IMAGE_CHANNELS==4)?GL_RGBA:GL_RGB ) );
