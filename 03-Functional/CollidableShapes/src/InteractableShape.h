@@ -17,8 +17,8 @@ using InteractableShapeRef = std::shared_ptr< class InteractableShape >;
 class InteractableShape : public DrawableShape {
 public:
 	
-	InteractableShape( const ci::ColorAf &color, const ci::Vec2f &position, const ci::Vec2f &size )
-	: DrawableShape( color ), mPosition( position ), mVelocity( ci::Vec2f::zero() ),mSize( size ){}
+	InteractableShape( const ci::ColorAf &color, const ci::vec2 &position, const ci::vec2 &size )
+	: DrawableShape( color ), mPosition( position ), mVelocity( ci::vec2( 0 ) ), mSize( size ) {}
 	
 	virtual ~InteractableShape() {}
 	
@@ -30,33 +30,30 @@ public:
 	
 		//check edges
 		
-		if( mPosition.x > ci::app::getWindowWidth() - mSize.x/2 || mPosition.x < mSize.x/2) mVelocity.x *= -1;
-		if( mPosition.y > ci::app::getWindowHeight() - mSize.y/2 || mPosition.y < mSize.y/2) mVelocity.y *= -1;
-	
+		if( mPosition.x > ci::app::getWindowWidth() - mSize.x/2 || mPosition.x < mSize.x/2
+		   || mPosition.y > ci::app::getWindowHeight() - mSize.y/2 || mPosition.y < mSize.y/2 )
+			mVelocity.y *= -1;
 	}
 	
 	virtual void hit() { mVelocity *= -1; }
 	
 	virtual const int& getType() const = 0;
 		
-	bool contains( const ci::Vec2f &position ) { return ci::Rectf( mPosition, mPosition+mSize ).contains( position ); }
+	bool contains( const ci::vec2 &position ) { return ci::Rectf( mPosition, mPosition+mSize ).contains( position ); }
 	bool intersects( const ci::Rectf &boundingRect ) { return ci::Rectf( mPosition, mPosition+mSize ).intersects( boundingRect ); }
 	
-	const ci::Vec2f& getVelocity() { return mVelocity; }
-	
-	const ci::Vec2f& getPosition() { return mPosition; }
-	void setPosition( const ci::Vec2f& position ){ mPosition = position; }
-	
-	const ci::Vec2f& getSize() { return mSize; }
-
+	const ci::vec2& getSize() { return mSize; }
+	const ci::vec2& getVelocity() { return mVelocity; }
+	const ci::vec2& getPosition() { return mPosition; }
+	void setPosition( const ci::vec2& position ){ mPosition = position; }
 	
 protected:
 	
-	void setVelocity( const ci::Vec2f& velocity ) { mVelocity = velocity; }
+	void setVelocity( const ci::vec2& velocity ) { mVelocity = velocity; }
 	
-	ci::Vec2f mPosition;
-	ci::Vec2f mVelocity;
-	ci::Vec2f mSize;
+	ci::vec2 mPosition;
+	ci::vec2 mVelocity;
+	ci::vec2 mSize;
 	
 	friend class CollisionSystem;
 };

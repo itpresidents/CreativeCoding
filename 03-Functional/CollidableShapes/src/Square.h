@@ -13,11 +13,9 @@
 using SquareRef = std::shared_ptr<class Square>;
 
 class Square : public InteractableShape {
-	
-	
 public:
 	
-	Square( const ci::ColorAf &color, const ci::Vec2f &position, const ci::Vec2f &size );
+	Square( const ci::ColorAf &color, const ci::vec2 &position, const ci::vec2 &size );
     ~Square(){}
 	
 	static const int mId;

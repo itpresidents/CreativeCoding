@@ -7,16 +7,14 @@
 //
 
 #pragma once
-#include "InteractableShape.h"
 
+#include "InteractableShape.h"
 
 using CircleRef = std::shared_ptr<class Circle>;
 
 class Circle : public InteractableShape {
-	
-	
 public:
-	Circle( const ci::ColorAf &color, const ci::Vec2f &position, float radius );
+	Circle( const ci::ColorAf &color, const ci::vec2 &position, float radius );
 	~Circle() {}
 	
 	static const int mId;

@@ -18,8 +18,8 @@
 using namespace std;
 using namespace ci;
 
-Circle::Circle(  const ci::ColorAf &color, const Vec2f &position, float radius )
-: InteractableShape( color, position, Vec2f( radius*2, radius*2 ) ), mRadius( radius )
+Circle::Circle(  const ci::ColorAf &color, const vec2 &position, float radius )
+: InteractableShape( color, position, vec2( radius*2, radius*2 ) ), mRadius( radius )
 {
 }
 

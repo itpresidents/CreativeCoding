@@ -1,4 +1,5 @@
 #include "cinder/app/AppNative.h"
+#include "cinder/app/RendererGl.h"
 #include "cinder/gl/gl.h"
 #include "cinder/Rand.h"
 
@@ -35,7 +36,7 @@ void DrawableShapesApp::setup()
 			mSystem.addShape(
 							 CircleRef( new Circle(
 												   ColorAf( randFloat(), randFloat(), randFloat(), 1. ),
-												   Vec2f( randFloat(getWindowWidth()), randFloat(getWindowHeight()) ),
+												   vec2( randFloat(getWindowWidth()), randFloat(getWindowHeight()) ),
 												   randFloat(5, 15)
 												   )
 									   )
@@ -44,8 +45,8 @@ void DrawableShapesApp::setup()
 			mSystem.addShape(
 							 SquareRef( new Square(
 												   ColorAf( randFloat(), randFloat(), randFloat(), 1. ),
-												   Vec2f( randFloat(getWindowWidth()), randFloat(getWindowHeight()) ),
-												   Vec2f(randFloat(5, 10),randFloat(5,10) )
+												   vec2( randFloat(getWindowWidth()), randFloat(getWindowHeight()) ),
+												   vec2(randFloat(5, 10),randFloat(5,10) )
 												   )
 									   )
 							 );

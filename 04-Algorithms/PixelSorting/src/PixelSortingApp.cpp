@@ -34,6 +34,7 @@ class PixelSortingApp : public AppNative {
 	void fastSort( const Surface8u &sortableSurface );
 	void pboSort( const Surface8u &sortableSurface );
 	void sortWholeImage( const Surface8u &sortableSurface );
+	void superFastSort( const Surface8u &sortableSurface );
 	
 	CaptureRef			mCapture;
 	gl::TextureRef		mTexture;
@@ -43,6 +44,8 @@ class PixelSortingApp : public AppNative {
 	gl::TextureRef		mTexs[NUM_BUFFERS];
 	gl::PboRef			mPbos[NUM_BUFFERS];
 	uint32_t			mCurrentTex, mCurrentPbo;
+	
+	bool				mUseArray;
 	
 	SortType			mSortType;
 };
@@ -54,12 +57,12 @@ bool comparator ( const Color8u &first, const Color8u &second )
 
 void PixelSortingApp::setup()
 {
-	std::array<Color8u, IMAGE_WIDTH> mTest;
+	std::array<Color8u, IMAGE_WIDTH*IMAGE_HEIGHT> mTest;
 	for( auto & pixel : mTest ) {
 		pixel = Color8u(rand() % 255, rand() % 255, rand() % 255);
 	}
 	std::sort( mTest.begin(), mTest.end(), ::comparator );
-	
+	mUseArray = false;
 	try {
 		mCapture = Capture::create(IMAGE_WIDTH,IMAGE_HEIGHT );
 		auto devices = Capture::getDevices();
@@ -91,6 +94,8 @@ void PixelSortingApp::keyDown( cinder::app::KeyEvent event )
 		mSortType = SortType::PBO;
 	else if( event.getChar() == ' ' )
 		( mCapture && mCapture->isCapturing() ) ? mCapture->stop() : mCapture->start();
+	else if( event.getChar() == 'a' )
+		mUseArray = !mUseArray;
 }
 
 void PixelSortingApp::slowSort( const Surface8u &sortableSurface )
@@ -121,16 +126,27 @@ void PixelSortingApp::slowSort( const Surface8u &sortableSurface )
 
 void PixelSortingApp::fastSort( const Surface8u &sortableSurface )
 {
+	static std::array<Color8u, IMAGE_WIDTH> sortableImage;
 	auto surfaceData = (Color8u*)sortableSurface.getData();
 	
 	for( int y = 0; y <IMAGE_HEIGHT; y++ ) {
 		auto rowOffset = y *IMAGE_WIDTH;
-		std::copy( surfaceData, surfaceData +IMAGE_WIDTH, mSortablePixels.begin() );
-		mSortablePixels.sort( ::comparator );
-		auto iterator = mPixels.begin() + rowOffset;
-		std::move( mSortablePixels.begin(), mSortablePixels.end(), iterator );
-		surfaceData = surfaceData +IMAGE_WIDTH;
+		if( ! mUseArray ) {
+			std::copy( surfaceData, surfaceData +IMAGE_WIDTH, mSortablePixels.begin() );
+			mSortablePixels.sort( ::comparator );
+			auto iterator = mPixels.begin() + rowOffset;
+			std::move( mSortablePixels.begin(), mSortablePixels.end(), iterator );
+			surfaceData = surfaceData + IMAGE_WIDTH;
+		}
+		else {
+			auto size = IMAGE_WIDTH*sizeof(Color8u);
+			memcpy( sortableImage.data(), sortableSurface.getData() + rowOffset, size );
+			std::sort( sortableImage.begin(), sortableImage.end(), ::comparator );
+			memcpy( mPixels.data() + rowOffset, sortableImage.data(), size );
+		}
+		
 	}
+	
 	
 	mTexture = gl::Texture::create( &mPixels.data()->r,
 								   GL_RGB,
@@ -182,39 +198,58 @@ void PixelSortingApp::sortWholeImage( const Surface8u &sortableSurface )
 								   gl::Texture2d::Format().loadTopDown() );
 }
 
+void PixelSortingApp::superFastSort( const Surface8u &sortableSurface )
+{
+	static std::array<Color8u, IMAGE_HEIGHT*IMAGE_WIDTH> sortableImage;
+	memcpy( sortableImage.data(),
+		   sortableSurface.getData(),
+		   IMAGE_WIDTH*IMAGE_HEIGHT*sizeof(Color8u) );
+	std::sort( sortableImage.begin(), sortableImage.end(), ::comparator );
+	mTexture = gl::Texture::create( &sortableImage.data()->r,
+								   GL_RGB,
+								   IMAGE_WIDTH,
+								   IMAGE_HEIGHT,
+								   gl::Texture2d::Format().loadTopDown() );
+}
+
 void PixelSortingApp::update()
 {
 	if( mCapture && mCapture->checkNewFrame() ) {
 		
-		switch ( mSortType ) {
-			case SortType::SLOW: {
-				Timer time;
-				time.start();
-				slowSort( mCapture->getSurface() );
-				time.stop();
-				cout << "slowSort: " << time.getSeconds() << endl;
-			}
-			break;
-			case SortType::FAST: {
-				Timer time;
-				time.start();
-				fastSort( mCapture->getSurface() );
-				time.stop();
-				cout << "fastSort: " << time.getSeconds() << endl;
-			}
-			break;
-			case SortType::PBO: {
-				Timer time;
-				time.start();
-				pboSort( mCapture->getSurface() );
-				time.stop();
-				cout << "pboSort: " << time.getSeconds() << endl;
-			}
-			break;
-			default:
-				cout << "No Sort Chosen" << endl;
-			break;
-		}
+//		switch ( mSortType ) {
+//			case SortType::SLOW: {
+//				Timer time;
+//				time.start();
+//				slowSort( mCapture->getSurface() );
+//				time.stop();
+//				cout << "slowSort: " << time.getSeconds() << endl;
+//			}
+//			break;
+//			case SortType::FAST: {
+//				Timer time;
+//				time.start();
+//				fastSort( mCapture->getSurface() );
+//				time.stop();
+//				cout << "fastSort: " << time.getSeconds() << endl;
+//			}
+//			break;
+//			case SortType::PBO: {
+//				Timer time;
+//				time.start();
+//				pboSort( mCapture->getSurface() );
+//				time.stop();
+//				cout << "pboSort: " << time.getSeconds() << endl;
+//			}
+//			break;
+//			default:
+//				cout << "No Sort Chosen" << endl;
+//			break;
+//		}
+		Timer time;
+		time.start();
+		fastSort( mCapture->getSurface() );
+		time.stop();
+		cout << "superFastSort: " << time.getSeconds() << endl;
 	}
 	
 	getWindow()->setTitle(to_string(getAverageFps()));
@@ -227,6 +262,7 @@ void PixelSortingApp::draw()
 	
 	if( mTexture ) {
 		gl::pushModelMatrix();
+//		gl::translate( vec3(sin(getElapsedSeconds()) * getWindowWidth(), cos(getElapsedSeconds()) * getWindowHeight(), 0 ) );
 		gl::draw( mTexture );
 		gl::popModelMatrix();
 	}

@@ -12,7 +12,7 @@ using namespace ci;
 using namespace ci::app;
 
 
-Square::Square( const ci::ColorAf &color, const Vec2f &position, const Vec2f &size )
+Square::Square( const ci::ColorAf &color, const vec2 &position, const vec2 &size )
 : InteractableShape( color, position, size )
 {
 }

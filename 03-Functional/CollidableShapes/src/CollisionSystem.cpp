@@ -10,6 +10,7 @@
 #include "Circle.h"
 #include "Square.h"
 #include "cinder/Rand.h"
+#include "cinder/Log.h"
 
 using namespace ci;
 using namespace ci::app;
@@ -27,27 +28,21 @@ void CollisionSystem::update(){
 				
 				switch (shape->getType()) {
 						
-					case 0:
-						
+					case 0: {
 						if( mCallbacks.count(Square::mId) > 0 )
 							mCallbacks[Square::mId]();
-						
-						break;
-						
-					case 1:
-						
+					}
+					break;
+					case 1: {
 						if( mCallbacks.count(Circle::mId) > 0 )
 							mCallbacks[Circle::mId]();
-						
-						break;
-						
-					default:
-						
-						console() << "CollisionSystem::Update couldn't find a callback for this type." << std::endl;
-						
-						break;
+					}
+					break;
+					default: {
+						CI_LOG_E("CollisionSystem::Update couldn't find a callback for this type.");
+					}
+					break;
 				}
-								
 			}
 			
 		}
@@ -57,7 +52,7 @@ void CollisionSystem::update(){
 
 }
 
-void CollisionSystem::checkMouse(const ci::Vec2f &mousePos){
+void CollisionSystem::checkMouse(const ci::vec2 &mousePos){
 	
 	for( auto & shape : mShapes ){
 		if( shape->contains(mousePos) ){
@@ -77,7 +72,7 @@ void CollisionSystem::draw(){
 
 
 void CollisionSystem::addShape( const InteractableShapeRef& shape ){
-	shape->setVelocity(randVec2f()*randFloat(1, 3));
+	shape->setVelocity( randVec2f() * randFloat( 1, 3 ) );
 	mShapes.push_back(shape);
 }
 void CollisionSystem::addCallback( int type, const Callback& callback ){ mCallbacks.insert(std::make_pair(type,callback)); }
