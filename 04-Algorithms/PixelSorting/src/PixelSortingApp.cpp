@@ -1,4 +1,4 @@
-#include "cinder/app/AppNative.h"
+#include "cinder/app/App.h"
 #include "cinder/app/RendererGl.h"
 #include "cinder/gl/gl.h"
 #include "cinder/gl/Pbo.h"
@@ -23,18 +23,18 @@ enum class SortType {
 	PBO,
 };
 
-class PixelSortingApp : public AppNative {
+class PixelSortingApp : public App {
   public:
 	void setup() override;
 	void keyDown( KeyEvent event ) override;
 	void update() override;
 	void draw() override;
 	
-	void slowSort( const Surface8u &sortableSurface );
-	void fastSort( const Surface8u &sortableSurface );
-	void pboSort( const Surface8u &sortableSurface );
-	void sortWholeImage( const Surface8u &sortableSurface );
-	void superFastSort( const Surface8u &sortableSurface );
+	void slowSort( const Surface8uRef &sortableSurface );
+	void fastSort( const Surface8uRef &sortableSurface );
+	void pboSort( const Surface8uRef &sortableSurface );
+	void sortWholeImage( const Surface8uRef &sortableSurface );
+	void superFastSort( const Surface8uRef &sortableSurface );
 	
 	CaptureRef			mCapture;
 	gl::TextureRef		mTexture;
@@ -98,9 +98,9 @@ void PixelSortingApp::keyDown( cinder::app::KeyEvent event )
 		mUseArray = !mUseArray;
 }
 
-void PixelSortingApp::slowSort( const Surface8u &sortableSurface )
+void PixelSortingApp::slowSort( const Surface8uRef &sortableSurface )
 {
-	auto iter = sortableSurface.getIter();
+	auto iter = sortableSurface->getIter();
 	int y = 0;
 	while ( iter.line() ) {
 		
@@ -111,7 +111,7 @@ void PixelSortingApp::slowSort( const Surface8u &sortableSurface )
 			sortPixelIt->b = iter.b();
 			++sortPixelIt;
 		}
-		auto iterator = mPixels.begin()+(y * sortableSurface.getWidth() );
+		auto iterator = mPixels.begin()+(y * sortableSurface->getWidth() );
 		mSortablePixels.sort( ::comparator );
 		std::move( mSortablePixels.begin(), mSortablePixels.end(), iterator );
 		y++;
@@ -124,10 +124,10 @@ void PixelSortingApp::slowSort( const Surface8u &sortableSurface )
 								   gl::Texture2d::Format().loadTopDown() );
 }
 
-void PixelSortingApp::fastSort( const Surface8u &sortableSurface )
+void PixelSortingApp::fastSort( const Surface8uRef &sortableSurface )
 {
 	static std::array<Color8u, IMAGE_WIDTH> sortableImage;
-	auto surfaceData = (Color8u*)sortableSurface.getData();
+	auto surfaceData = (Color8u*)sortableSurface->getData();
 	
 	for( int y = 0; y <IMAGE_HEIGHT; y++ ) {
 		auto rowOffset = y *IMAGE_WIDTH;
@@ -140,7 +140,7 @@ void PixelSortingApp::fastSort( const Surface8u &sortableSurface )
 		}
 		else {
 			auto size = IMAGE_WIDTH*sizeof(Color8u);
-			memcpy( sortableImage.data(), sortableSurface.getData() + rowOffset, size );
+			memcpy( sortableImage.data(), sortableSurface->getData() + rowOffset, size );
 			std::sort( sortableImage.begin(), sortableImage.end(), ::comparator );
 			memcpy( mPixels.data() + rowOffset, sortableImage.data(), size );
 		}
@@ -155,11 +155,11 @@ void PixelSortingApp::fastSort( const Surface8u &sortableSurface )
 								   gl::Texture2d::Format().loadTopDown() );
 }
 
-void PixelSortingApp::pboSort( const Surface8u &sortableSurface )
+void PixelSortingApp::pboSort( const Surface8uRef &sortableSurface )
 {
 	gl::ScopedBuffer bscp( mPbos[mCurrentPbo] );
 	
-	auto surfaceData = (Color8u*)sortableSurface.getData();
+	auto surfaceData = (Color8u*)sortableSurface->getData();
 	// why does this slow things down on the Mac?
 	//	mPbos[mCurrentPbo]->bufferData( mPbos[mCurrentPbo]->getSize(), nullptr, GL_STREAM_DRAW );
 	void *pboData = mPbos[mCurrentPbo]->map( GL_WRITE_ONLY );
@@ -183,10 +183,10 @@ void PixelSortingApp::pboSort( const Surface8u &sortableSurface )
 	mTexture = mTexs[mCurrentTex];
 }
 
-void PixelSortingApp::sortWholeImage( const Surface8u &sortableSurface )
+void PixelSortingApp::sortWholeImage( const Surface8uRef &sortableSurface )
 {
 	std::list<Color8u> sortableImage(IMAGE_WIDTH*IMAGE_HEIGHT);
-	auto surfaceData = (Color8u*) sortableSurface.getData();
+	auto surfaceData = (Color8u*) sortableSurface->getData();
 	std::copy( surfaceData, surfaceData + IMAGE_WIDTH * IMAGE_HEIGHT, sortableImage.begin() );
 	sortableImage.sort( ::comparator );
 	std::move( sortableImage.begin(), sortableImage.end(), mPixels.begin() );
@@ -198,11 +198,11 @@ void PixelSortingApp::sortWholeImage( const Surface8u &sortableSurface )
 								   gl::Texture2d::Format().loadTopDown() );
 }
 
-void PixelSortingApp::superFastSort( const Surface8u &sortableSurface )
+void PixelSortingApp::superFastSort( const Surface8uRef &sortableSurface )
 {
 	static std::array<Color8u, IMAGE_HEIGHT*IMAGE_WIDTH> sortableImage;
 	memcpy( sortableImage.data(),
-		   sortableSurface.getData(),
+		   sortableSurface->getData(),
 		   IMAGE_WIDTH*IMAGE_HEIGHT*sizeof(Color8u) );
 	std::sort( sortableImage.begin(), sortableImage.end(), ::comparator );
 	mTexture = gl::Texture::create( &sortableImage.data()->r,
@@ -269,4 +269,4 @@ void PixelSortingApp::draw()
 
 }
 
-CINDER_APP_NATIVE( PixelSortingApp, RendererGl )
+CINDER_APP( PixelSortingApp, RendererGl )

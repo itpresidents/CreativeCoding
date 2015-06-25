@@ -18,7 +18,7 @@
 class Circle : public DrawableShape {
 public:
 	// Constructor
-	Circle( const ci::Vec2f &position, float radius );
+	Circle( const ci::vec2 &position, float radius );
 	// Destructor which will append itself to the destruction process
 	// of circle.
 	~Circle() {}

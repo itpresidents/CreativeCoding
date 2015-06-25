@@ -90,6 +90,6 @@ int Circle::getRadius()
 void Circle::draw()
 {
     gl::color( mColor );
-    gl::drawSolidCircle( Vec2f( mX, mY ), mRadius );
+    gl::drawSolidCircle( vec2( mX, mY ), mRadius );
 }
 

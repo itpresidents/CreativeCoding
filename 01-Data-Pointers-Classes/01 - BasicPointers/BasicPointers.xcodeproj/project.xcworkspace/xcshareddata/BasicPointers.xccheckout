@@ -12,13 +12,17 @@
 	<dict>
 		<key>153058CBCCB1CBDDCC34DDF0218B1860A931D0D5</key>
 		<string>https://github.com/itpresidents/CreativeCoding.git</string>
+		<key>AD4B458D0D225ED63FAE0155615993B7D3ECE020</key>
+		<string>https://github.com/cinder/Cinder.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>01-Data-Pointers-Classes/BasicPointers/BasicPointers.xcodeproj</string>
+	<string>01-Data-Pointers-Classes/01 - BasicPointers/BasicPointers.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>153058CBCCB1CBDDCC34DDF0218B1860A931D0D5</key>
 		<string>../../../..</string>
+		<key>AD4B458D0D225ED63FAE0155615993B7D3ECE020</key>
+		<string>../../../../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/itpresidents/CreativeCoding.git</string>
@@ -28,6 +32,14 @@
 	<string>153058CBCCB1CBDDCC34DDF0218B1860A931D0D5</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>AD4B458D0D225ED63FAE0155615993B7D3ECE020</string>
+			<key>IDESourceControlWCCName</key>
+			<string>..</string>
+		</dict>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>

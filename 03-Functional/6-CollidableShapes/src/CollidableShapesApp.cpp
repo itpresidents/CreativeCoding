@@ -1,4 +1,4 @@
-#include "cinder/app/AppNative.h"
+#include "cinder/app/App.h"
 #include "cinder/app/RendererGl.h"
 #include "cinder/gl/gl.h"
 #include "cinder/Rand.h"
@@ -16,12 +16,12 @@ enum ShapeType {
 	CIRCLE = 1
 };
 
-class DrawableShapesApp : public AppNative {
+class DrawableShapesApp : public App {
 public:
 	void setup() override;
-	void mouseDown( MouseEvent event );
-	void update();
-	void draw();
+	void mouseDown( MouseEvent event ) override;
+	void update() override;
+	void draw() override;
 	
 	CollisionSystem mSystem;
 
@@ -74,4 +74,4 @@ void DrawableShapesApp::draw()
 
 }
 
-CINDER_APP_NATIVE( DrawableShapesApp, RendererGl )
+CINDER_APP( DrawableShapesApp, RendererGl )

@@ -16,7 +16,7 @@
 using namespace std;
 using namespace ci;
 
-DrawableShape::DrawableShape( const Vec2f &position )
+DrawableShape::DrawableShape( const vec2 &position )
 : mPosition( position ), mColor( randFloat(), randFloat(), randFloat() )
 {
 }
@@ -27,7 +27,7 @@ void DrawableShape::update()
 }
 
 
-Vec2f DrawableShape::getPosition()
+vec2 DrawableShape::getPosition()
 {
     return mPosition;
 }

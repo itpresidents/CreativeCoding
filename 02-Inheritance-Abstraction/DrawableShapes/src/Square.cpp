@@ -13,7 +13,7 @@ using namespace ci::app;
 
 // Here's our implementation of the declared functions for square.
 
-Square::Square( const Vec2f &position, const Vec2f &size )
+Square::Square( const vec2 &position, const vec2 &size )
 // DrawableShape is inialized first.
 : DrawableShape( position ), mSize( size )
 {

@@ -1,4 +1,5 @@
-#include "cinder/app/AppNative.h"
+#include "cinder/app/App.h"
+#include "cinder/app/RendererGl.h"
 #include "cinder/gl/gl.h"
 #include "cinder/Rand.h"
 
@@ -22,7 +23,7 @@ using CircleRef = std::shared_ptr<Circle>;
 using SquareRef = std::shared_ptr<Square>;
 using DrawableShapes = std::vector<DrawableShapeRef>;
 
-class DrawableShapesApp : public AppNative {
+class DrawableShapesApp : public App {
 public:
 	void setup() override;
 	void mouseDown( MouseEvent event );
@@ -46,13 +47,13 @@ void DrawableShapesApp::setup()
 	for( auto & shape : mShapes ) {
 		// both need a position. Remember because the type on the right is already
 		// figured out, 'auto' is here to tell the compiler to infer it. therefore
-		// position is of type Vec2f.
-		auto position = Vec2f( randFloat( 0, getWindowWidth() ), randFloat( 0, getWindowHeight() ) );
+		// position is of type vec2.
+		auto position = vec2( randFloat( 0, getWindowWidth() ), randFloat( 0, getWindowHeight() ) );
 		
 		// I use this construct to create half as circle's and half as squares.
 		if( square ) {
 			// same use of auto here as above.
-			auto size = Vec2f( randFloat( 5, 10 ), randFloat( 5, 10 ) );
+			auto size = vec2( randFloat( 5, 10 ), randFloat( 5, 10 ) );
 			// we use the 'reset' function of shape which destroys the inner member
 			// pointer if it exists. One doesn't exist as the above comment tells
 			// us that resize just creates NUM_SHAPES instances of empty shared_ptr's
@@ -97,4 +98,4 @@ void DrawableShapesApp::draw()
 	}
 }
 
-CINDER_APP_NATIVE( DrawableShapesApp, RendererGl )
+CINDER_APP( DrawableShapesApp, RendererGl )

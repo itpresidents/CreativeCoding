@@ -20,7 +20,7 @@ using namespace ci;
 
 // Here's our implementation of the declared functions for circle.
 
-Circle::Circle( const Vec2f &position, float radius )
+Circle::Circle( const vec2 &position, float radius )
 // DrawableShape is inialized first.
 : DrawableShape( position ), mRadius( radius )
 {

@@ -16,7 +16,7 @@ class DrawableShape {
 public:
 	
 	// Constructor
-	DrawableShape( const ci::Vec2f &position );
+	DrawableShape( const ci::vec2 &position );
 	// Virtual Destructor. Created this way because we intend to derive from
 	// this base class. For a further explanation take a look at 04 - C++11AndTypes
     virtual ~DrawableShape(){}
@@ -35,9 +35,9 @@ public:
 	virtual void update();
 	
 	// Getter for Position.
-    ci::Vec2f getPosition();
+    ci::vec2 getPosition();
 	// Setter for Position.
-	void setPosition( const ci::Vec2f& position ){ mPosition = position; }
+	void setPosition( const ci::vec2& position ){ mPosition = position; }
 	
 	// Getter for Color.
 	const ci::ColorAf& getColor();
@@ -46,7 +46,7 @@ public:
 
 // 'protected:' so that our inheriting classes can use.
 protected:
-    ci::Vec2f mPosition;
+    ci::vec2 mPosition;
     ci::Colorf mColor;
 };
 

@@ -1,4 +1,5 @@
-#include "cinder/app/AppNative.h"
+#include "cinder/app/App.h"
+#include "cinder/app/RendererGl.h"
 #include "cinder/gl/gl.h"
 
 #include "Circle.h"
@@ -20,7 +21,7 @@ using namespace std;
 // at the source.
 const int NUM_CIRCLES = 1000;
 
-class CirclesApp : public AppNative {
+class CirclesApp : public App {
   public:
 	void setup();
 	void mouseDown( MouseEvent event );	
@@ -114,4 +115,4 @@ void CirclesApp::draw()
     
 }
 
-CINDER_APP_NATIVE( CirclesApp, RendererGl )
+CINDER_APP( CirclesApp, RendererGl )
