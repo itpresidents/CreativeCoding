@@ -7,25 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		006D720419952D00008149E2 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 006D720219952D00008149E2 /* AVFoundation.framework */; };
-		006D720519952D00008149E2 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 006D720319952D00008149E2 /* CoreMedia.framework */; };
 		0091D8F90E81B9330029341E /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0091D8F80E81B9330029341E /* OpenGL.framework */; };
 		00B784B30FF439BC000DE1D7 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00B784AF0FF439BC000DE1D7 /* Accelerate.framework */; };
 		00B784B40FF439BC000DE1D7 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00B784B00FF439BC000DE1D7 /* AudioToolbox.framework */; };
 		00B784B50FF439BC000DE1D7 /* AudioUnit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00B784B10FF439BC000DE1D7 /* AudioUnit.framework */; };
 		00B784B60FF439BC000DE1D7 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00B784B20FF439BC000DE1D7 /* CoreAudio.framework */; };
-		11D7AF3C52E241649A9BFD42 /* PixelSortingApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 41865D1EE5B84723BB934768 /* PixelSortingApp.cpp */; };
 		5323E6B20EAFCA74003A9687 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5323E6B10EAFCA74003A9687 /* CoreVideo.framework */; };
 		5323E6B60EAFCA7E003A9687 /* QTKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5323E6B50EAFCA7E003A9687 /* QTKit.framework */; };
+		6514651A1107406EBD62E6FA /* DrawableShapesApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DA7C3C94995545AD8707479D /* DrawableShapesApp.cpp */; };
+		6D02B892D0454E8A91EC89A8 /* CinderApp.icns in Resources */ = {isa = PBXBuildFile; fileRef = DCBDF810DBD442A98AAE01F4 /* CinderApp.icns */; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
-		ACD26D95EAC14B41A395C235 /* CinderApp.icns in Resources */ = {isa = PBXBuildFile; fileRef = DC37970583E64FD99CDCCFA2 /* CinderApp.icns */; };
-		B3E1DAA81B3E5A030035B6D9 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3E1DAA71B3E5A030035B6D9 /* IOKit.framework */; };
-		B3E1DAAA1B3E5A090035B6D9 /* IOSurface.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3E1DAA91B3E5A090035B6D9 /* IOSurface.framework */; };
+		B3A3F75219D1DCC900B4F44A /* Circle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B3A3F74C19D1DCC900B4F44A /* Circle.cpp */; };
+		B3A3F75319D1DCC900B4F44A /* DrawableShape.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B3A3F74E19D1DCC900B4F44A /* DrawableShape.cpp */; };
+		B3A3F75419D1DCC900B4F44A /* Square.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B3A3F75019D1DCC900B4F44A /* Square.cpp */; };
+		B3E1DA791B3E555E0035B6D9 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3E1DA781B3E555E0035B6D9 /* IOKit.framework */; };
+		B3E1DA7B1B3E55630035B6D9 /* IOSurface.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3E1DA7A1B3E55630035B6D9 /* IOSurface.framework */; };
+		B3E322AA1AF97495001BDFA9 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3E322A91AF97495001BDFA9 /* AVFoundation.framework */; };
+		B3E322AC1AF974CD001BDFA9 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3E322AB1AF974CD001BDFA9 /* CoreMedia.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		006D720219952D00008149E2 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
-		006D720319952D00008149E2 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		0091D8F80E81B9330029341E /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = /System/Library/Frameworks/OpenGL.framework; sourceTree = "<absolute>"; };
 		00B784AF0FF439BC000DE1D7 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
 		00B784B00FF439BC000DE1D7 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
@@ -34,16 +35,25 @@
 		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
 		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
-		41865D1EE5B84723BB934768 /* PixelSortingApp.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.cpp; name = PixelSortingApp.cpp; path = ../src/PixelSortingApp.cpp; sourceTree = "<group>"; };
-		4F74C95594B34AC9800AEF0D /* Resources.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Resources.h; path = ../include/Resources.h; sourceTree = "<group>"; };
+		30ED88A4965345E98A346173 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5323E6B10EAFCA74003A9687 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = /System/Library/Frameworks/CoreVideo.framework; sourceTree = "<absolute>"; };
 		5323E6B50EAFCA7E003A9687 /* QTKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QTKit.framework; path = /System/Library/Frameworks/QTKit.framework; sourceTree = "<absolute>"; };
-		6556BDB643BA4AF7AE565D7F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8D1107320486CEB800E47090 /* PixelSorting.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PixelSorting.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		B3E1DAA71B3E5A030035B6D9 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
-		B3E1DAA91B3E5A090035B6D9 /* IOSurface.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOSurface.framework; path = System/Library/Frameworks/IOSurface.framework; sourceTree = SDKROOT; };
-		DC37970583E64FD99CDCCFA2 /* CinderApp.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = CinderApp.icns; path = ../resources/CinderApp.icns; sourceTree = "<group>"; };
-		F6DFE197D3414FDC9FCBA535 /* PixelSorting_Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = "\"\""; path = PixelSorting_Prefix.pch; sourceTree = "<group>"; };
+		6CB485B5799C4D89A6142B7A /* Resources.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Resources.h; path = ../include/Resources.h; sourceTree = "<group>"; };
+		8D1107320486CEB800E47090 /* DrawableShapes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DrawableShapes.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		ADF96E56BDE841BCB7472D14 /* DrawableShapes_Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = "\"\""; path = DrawableShapes_Prefix.pch; sourceTree = "<group>"; };
+		B3A3F74C19D1DCC900B4F44A /* Circle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Circle.cpp; path = ../src/Circle.cpp; sourceTree = "<group>"; };
+		B3A3F74D19D1DCC900B4F44A /* Circle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Circle.h; path = ../src/Circle.h; sourceTree = "<group>"; };
+		B3A3F74E19D1DCC900B4F44A /* DrawableShape.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = DrawableShape.cpp; path = ../src/DrawableShape.cpp; sourceTree = "<group>"; };
+		B3A3F74F19D1DCC900B4F44A /* DrawableShape.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DrawableShape.h; path = ../src/DrawableShape.h; sourceTree = "<group>"; };
+		B3A3F75019D1DCC900B4F44A /* Square.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Square.cpp; path = ../src/Square.cpp; sourceTree = "<group>"; };
+		B3A3F75119D1DCC900B4F44A /* Square.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Square.h; path = ../src/Square.h; sourceTree = "<group>"; };
+		B3E1DA781B3E555E0035B6D9 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
+		B3E1DA7A1B3E55630035B6D9 /* IOSurface.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOSurface.framework; path = System/Library/Frameworks/IOSurface.framework; sourceTree = SDKROOT; };
+		B3E322A71AF9748E001BDFA9 /* CoreMediaIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMediaIO.framework; path = System/Library/Frameworks/CoreMediaIO.framework; sourceTree = SDKROOT; };
+		B3E322A91AF97495001BDFA9 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		B3E322AB1AF974CD001BDFA9 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		DA7C3C94995545AD8707479D /* DrawableShapesApp.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.cpp; name = DrawableShapesApp.cpp; path = ../src/DrawableShapesApp.cpp; sourceTree = "<group>"; };
+		DCBDF810DBD442A98AAE01F4 /* CinderApp.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = CinderApp.icns; path = ../resources/CinderApp.icns; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,10 +61,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B3E1DAAA1B3E5A090035B6D9 /* IOSurface.framework in Frameworks */,
-				B3E1DAA81B3E5A030035B6D9 /* IOKit.framework in Frameworks */,
-				006D720419952D00008149E2 /* AVFoundation.framework in Frameworks */,
-				006D720519952D00008149E2 /* CoreMedia.framework in Frameworks */,
+				B3E1DA7B1B3E55630035B6D9 /* IOSurface.framework in Frameworks */,
+				B3E1DA791B3E555E0035B6D9 /* IOKit.framework in Frameworks */,
+				B3E322AC1AF974CD001BDFA9 /* CoreMedia.framework in Frameworks */,
+				B3E322AA1AF97495001BDFA9 /* AVFoundation.framework in Frameworks */,
 				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
 				0091D8F90E81B9330029341E /* OpenGL.framework in Frameworks */,
 				5323E6B20EAFCA74003A9687 /* CoreVideo.framework in Frameworks */,
@@ -79,7 +89,13 @@
 		080E96DDFE201D6D7F000001 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				41865D1EE5B84723BB934768 /* PixelSortingApp.cpp */,
+				B3A3F74C19D1DCC900B4F44A /* Circle.cpp */,
+				B3A3F74D19D1DCC900B4F44A /* Circle.h */,
+				B3A3F74E19D1DCC900B4F44A /* DrawableShape.cpp */,
+				B3A3F74F19D1DCC900B4F44A /* DrawableShape.h */,
+				B3A3F75019D1DCC900B4F44A /* Square.cpp */,
+				B3A3F75119D1DCC900B4F44A /* Square.h */,
+				DA7C3C94995545AD8707479D /* DrawableShapesApp.cpp */,
 			);
 			name = Source;
 			sourceTree = "<group>";
@@ -87,8 +103,6 @@
 		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				006D720219952D00008149E2 /* AVFoundation.framework */,
-				006D720319952D00008149E2 /* CoreMedia.framework */,
 				00B784AF0FF439BC000DE1D7 /* Accelerate.framework */,
 				00B784B00FF439BC000DE1D7 /* AudioToolbox.framework */,
 				00B784B10FF439BC000DE1D7 /* AudioUnit.framework */,
@@ -113,12 +127,12 @@
 		19C28FACFE9D520D11CA2CBB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8D1107320486CEB800E47090 /* PixelSorting.app */,
+				8D1107320486CEB800E47090 /* DrawableShapes.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		29B97314FDCFA39411CA2CEA /* PixelSorting */ = {
+		29B97314FDCFA39411CA2CEA /* DrawableShapes */ = {
 			isa = PBXGroup;
 			children = (
 				01B97315FEAEA392516A2CEA /* Blocks */,
@@ -128,14 +142,14 @@
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
 			);
-			name = PixelSorting;
+			name = DrawableShapes;
 			sourceTree = "<group>";
 		};
 		29B97315FDCFA39411CA2CEA /* Headers */ = {
 			isa = PBXGroup;
 			children = (
-				4F74C95594B34AC9800AEF0D /* Resources.h */,
-				F6DFE197D3414FDC9FCBA535 /* PixelSorting_Prefix.pch */,
+				6CB485B5799C4D89A6142B7A /* Resources.h */,
+				ADF96E56BDE841BCB7472D14 /* DrawableShapes_Prefix.pch */,
 			);
 			name = Headers;
 			sourceTree = "<group>";
@@ -143,8 +157,8 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				DC37970583E64FD99CDCCFA2 /* CinderApp.icns */,
-				6556BDB643BA4AF7AE565D7F /* Info.plist */,
+				DCBDF810DBD442A98AAE01F4 /* CinderApp.icns */,
+				30ED88A4965345E98A346173 /* Info.plist */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -152,8 +166,11 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				B3E1DAA91B3E5A090035B6D9 /* IOSurface.framework */,
-				B3E1DAA71B3E5A030035B6D9 /* IOKit.framework */,
+				B3E1DA7A1B3E55630035B6D9 /* IOSurface.framework */,
+				B3E1DA781B3E555E0035B6D9 /* IOKit.framework */,
+				B3E322AB1AF974CD001BDFA9 /* CoreMedia.framework */,
+				B3E322A91AF97495001BDFA9 /* AVFoundation.framework */,
+				B3E322A71AF9748E001BDFA9 /* CoreMediaIO.framework */,
 				1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */,
 				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
 			);
@@ -163,9 +180,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		8D1107260486CEB800E47090 /* PixelSorting */ = {
+		8D1107260486CEB800E47090 /* DrawableShapes */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "PixelSorting" */;
+			buildConfigurationList = C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "DrawableShapes" */;
 			buildPhases = (
 				8D1107290486CEB800E47090 /* Resources */,
 				8D11072C0486CEB800E47090 /* Sources */,
@@ -175,10 +192,10 @@
 			);
 			dependencies = (
 			);
-			name = PixelSorting;
+			name = DrawableShapes;
 			productInstallPath = "$(HOME)/Applications";
-			productName = PixelSorting;
-			productReference = 8D1107320486CEB800E47090 /* PixelSorting.app */;
+			productName = DrawableShapes;
+			productReference = 8D1107320486CEB800E47090 /* DrawableShapes.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -188,7 +205,7 @@
 			isa = PBXProject;
 			attributes = {
 			};
-			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "PixelSorting" */;
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "DrawableShapes" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 1;
@@ -198,11 +215,11 @@
 				French,
 				German,
 			);
-			mainGroup = 29B97314FDCFA39411CA2CEA /* PixelSorting */;
+			mainGroup = 29B97314FDCFA39411CA2CEA /* DrawableShapes */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				8D1107260486CEB800E47090 /* PixelSorting */,
+				8D1107260486CEB800E47090 /* DrawableShapes */,
 			);
 		};
 /* End PBXProject section */
@@ -212,7 +229,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ACD26D95EAC14B41A395C235 /* CinderApp.icns in Resources */,
+				6D02B892D0454E8A91EC89A8 /* CinderApp.icns in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -223,7 +240,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				11D7AF3C52E241649A9BFD42 /* PixelSortingApp.cpp in Sources */,
+				B3A3F75419D1DCC900B4F44A /* Square.cpp in Sources */,
+				6514651A1107406EBD62E6FA /* DrawableShapesApp.cpp in Sources */,
+				B3A3F75219D1DCC900B4F44A /* Circle.cpp in Sources */,
+				B3A3F75319D1DCC900B4F44A /* DrawableShape.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -233,6 +253,7 @@
 		C01FCF4B08A954540054247B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CINDER_PATH = ../../../../../;
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
@@ -241,7 +262,7 @@
 				GCC_INLINES_ARE_PRIVATE_EXTERN = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = PixelSorting_Prefix.pch;
+				GCC_PREFIX_HEADER = DrawableShapes_Prefix.pch;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -251,7 +272,7 @@
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Applications";
 				OTHER_LDFLAGS = "\"$(CINDER_PATH)/lib/libcinder_d.a\"";
-				PRODUCT_NAME = PixelSorting;
+				PRODUCT_NAME = DrawableShapes;
 				SYMROOT = ./build;
 				WRAPPER_EXTENSION = app;
 			};
@@ -260,6 +281,7 @@
 		C01FCF4C08A954540054247B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CINDER_PATH = ../../../../../;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEAD_CODE_STRIPPING = YES;
@@ -269,7 +291,7 @@
 				GCC_INLINES_ARE_PRIVATE_EXTERN = YES;
 				GCC_OPTIMIZATION_LEVEL = 3;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = PixelSorting_Prefix.pch;
+				GCC_PREFIX_HEADER = DrawableShapes_Prefix.pch;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"NDEBUG=1",
 					"$(inherited)",
@@ -279,7 +301,7 @@
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Applications";
 				OTHER_LDFLAGS = "\"$(CINDER_PATH)/lib/libcinder.a\"";
-				PRODUCT_NAME = PixelSorting;
+				PRODUCT_NAME = DrawableShapes;
 				STRIP_INSTALLED_PRODUCT = YES;
 				SYMROOT = ./build;
 				WRAPPER_EXTENSION = app;
@@ -290,14 +312,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = x86_64;
+				ARCHS = i386;
 				CINDER_PATH = ../../../../clean_cinder;
 				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = "\"$(CINDER_PATH)/boost\"";
-				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				SDKROOT = macosx;
 				USER_HEADER_SEARCH_PATHS = "\"$(CINDER_PATH)/include\" ../include";
 			};
@@ -307,14 +329,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = x86_64;
+				ARCHS = i386;
 				CINDER_PATH = ../../../../clean_cinder;
 				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = "\"$(CINDER_PATH)/boost\"";
-				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				SDKROOT = macosx;
 				USER_HEADER_SEARCH_PATHS = "\"$(CINDER_PATH)/include\" ../include";
 			};
@@ -323,7 +345,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "PixelSorting" */ = {
+		C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "DrawableShapes" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C01FCF4B08A954540054247B /* Debug */,
@@ -332,7 +354,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "PixelSorting" */ = {
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "DrawableShapes" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C01FCF4F08A954540054247B /* Debug */,
